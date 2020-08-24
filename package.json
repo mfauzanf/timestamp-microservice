@@ -2,10 +2,10 @@
   "name": "timestamp-microservice",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/mfauzanf/timestamp-microservice#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "netlify-lambda": "^2.0.1",
-    "serverless-http": "^2.5.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

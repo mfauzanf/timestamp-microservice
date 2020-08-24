@@ -1,8 +1,6 @@
-var url = require('url')
-document.body.innerHTML = JSON.stringify(url.parse(window.location.href))
-
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 4000
 
 app.get("/", (req, res) => {
   res.send("Hello World");
@@ -48,4 +46,9 @@ app.get("/api/timestamp/:dateString?", (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("listening on 3000"));
+app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
+
+/**
+ * Referensi :
+ * https://github.com/msiadak/fcc-timestamp-microservice/blob/master/server.js
+ */
